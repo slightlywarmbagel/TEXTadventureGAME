@@ -7,13 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="938e37ed-b2ac-45b8-b8fc-2acfa37baa4f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/Command.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/CommandProcessor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/CommandValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/Game.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/Parser.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/Program.cs" afterDir="false" />
+    <list default="true" id="938e37ed-b2ac-45b8-b8fc-2acfa37baa4f" name="Changes" comment="After Thurs 9/12">
+      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/IO.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/Vocabulary.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TEXTadventureGAME/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TEXTadventureGAME/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/Command.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/Command.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/CommandProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/CommandProcessor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/CommandValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/CommandValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/Game.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +25,14 @@
     <option name="autoShow" value="false" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Em &lt;em@lyla.local&gt;" />
+      </list>
+    </option>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -53,19 +61,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.TEXTadventureGAME.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.TEXTadventureGAME.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="TEXTadventureGAME" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -98,8 +106,33 @@
       <workItem from="1725905276867" duration="2340000" />
       <workItem from="1726015414286" duration="4321000" />
       <workItem from="1726188107620" duration="649000" />
-      <workItem from="1726188887650" duration="2670000" />
+      <workItem from="1726188887650" duration="9088000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1726191575220</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1726191575220</updated>
+    </task>
+    <task id="LOCAL-00002" summary="After 9/12 class">
+      <option name="closed" value="true" />
+      <created>1726191645772</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1726191645772</updated>
+    </task>
+    <task id="LOCAL-00003" summary="After Thurs 9/12">
+      <option name="closed" value="true" />
+      <created>1726191760370</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1726191760370</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,5 +143,9 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="After 9/12 class" />
+    <MESSAGE value="After Thurs 9/12" />
+    <option name="LAST_COMMIT_MESSAGE" value="After Thurs 9/12" />
   </component>
 </project>

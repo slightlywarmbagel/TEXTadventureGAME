@@ -2,21 +2,13 @@ namespace TEXTadventureGAME;
 
 public static class CommandProcessor
 {
-    public static void GetCommand()
+    public static Command GetCommand()
     {
-        //get raw input string
-        Console.Write("> ");
-        string input = Console.ReadLine();
         
-        
+        string input = IO.Read();
         Command command = Parser.Parse(input);
+        command = CommandValidator.Validate(command);
         
-
-        //validate command
-        //do we know the words
-        
-        
-        
-        
+        return command;
     }
 }

@@ -20,26 +20,17 @@ public static class Game
         while (isPlaying)
         {
             
-            CommandProcessor.GetCommand();
-            /*
-            string[] words = input.Split(' ');
-            /*this is splitting text strings by the space that separates the words*/
-            /*words is an array
-            if (words.Length > 2)
-                Console.WriteLine("Too many words");
-            
-            foreach (string word in words)
-                /*an easier for loop
+            Command command = CommandProcessor.GetCommand();
+            if (command.IsValid)
             {
-                Console.WriteLine(word);
+                IO.Write(command.ToString());
             }
-            
-            
-            if (input == "exit")
+            else
             {
-                isPlaying = false;
-            } 
-            */
+                {
+                    IO.Write("Invalid Command");
+                }
+            }
         }
     }
 }
