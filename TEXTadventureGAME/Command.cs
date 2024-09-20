@@ -6,10 +6,17 @@ public class Command
 //not static bc u gotta remember multiple commands. various versions :D
 
 {
-    public string Verb;
-    public string Noun;
+    public string Verb = String.Empty;
+    public string Noun = String.Empty;
     public bool IsValid = false;
 
+
+    public bool HasNoNoun()
+    {
+        if (Noun == String.Empty)
+            return true;
+        return false;
+    }
     public string ToString()
     {
         return "Command: Verb = [" + Verb + "], Noun = [" + Noun + "], IsValid = " + IsValid;

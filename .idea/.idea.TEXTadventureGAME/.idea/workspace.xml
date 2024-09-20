@@ -7,14 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="938e37ed-b2ac-45b8-b8fc-2acfa37baa4f" name="Changes" comment="After Thurs 9/12">
-      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/IO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/Vocabulary.cs" afterDir="false" />
+    <list default="true" id="938e37ed-b2ac-45b8-b8fc-2acfa37baa4f" name="Changes" comment="After Tues 9/17">
+      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/Debugger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/Location.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TEXTadventureGAME/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TEXTadventureGAME/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/Command.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/Command.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/CommandProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/CommandProcessor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/CommandValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/CommandValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/Vocabulary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/Vocabulary.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +27,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="slightlywarmbagel &lt;baltz@chapman.edu&gt;" />
         <option value="Em &lt;em@lyla.local&gt;" />
       </list>
     </option>
@@ -106,7 +107,7 @@
       <workItem from="1725905276867" duration="2340000" />
       <workItem from="1726015414286" duration="4321000" />
       <workItem from="1726188107620" duration="649000" />
-      <workItem from="1726188887650" duration="9088000" />
+      <workItem from="1726188887650" duration="14009000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -132,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726191760370</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="After Tues 9/17">
+      <option name="closed" value="true" />
+      <created>1726654344138</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1726654344138</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +155,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="After 9/12 class" />
     <MESSAGE value="After Thurs 9/12" />
-    <option name="LAST_COMMIT_MESSAGE" value="After Thurs 9/12" />
+    <MESSAGE value="After Tues 9/17" />
+    <option name="LAST_COMMIT_MESSAGE" value="After Tues 9/17" />
   </component>
 </project>

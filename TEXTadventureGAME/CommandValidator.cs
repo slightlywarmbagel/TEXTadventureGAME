@@ -10,10 +10,14 @@ public static class CommandValidator
         {
             if (Vocabulary.IsStandaloneVerb(command.Verb))
             {
-                command.IsValid = true;
+                if (command.HasNoNoun())
+                {
+                    command.IsValid = true;
+                }
             }
             else if (Vocabulary.IsNoun(command.Noun))
             {
+                Debugger.Write("Valid Noun");
                 command.IsValid = true;
             }
         }
