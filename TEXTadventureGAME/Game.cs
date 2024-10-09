@@ -1,3 +1,4 @@
+using System.Data;
 using System.Text;
 
 namespace TEXTadventureGAME;
@@ -17,21 +18,24 @@ public static class Game
 
     public static void Play()
     {
+        Initialize();
+        
         while (isPlaying)
         {
             
             Command command = CommandProcessor.GetCommand();
             if (command.IsValid)
             {
-                IO.Write(command.ToString());
-            }
-            else
-            {
-                {
-                    IO.Write("Invalid Command");
-                }
+                Debugger.Write(command.ToString());
+                CommandHandler.Handle(command);
             }
         }
+    }
+
+    private static void Initialize()
+    {
+        Map.Initialize();
+        Player.Initialize();
     }
 }
 

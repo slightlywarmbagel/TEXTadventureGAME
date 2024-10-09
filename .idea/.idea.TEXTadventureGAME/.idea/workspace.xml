@@ -7,13 +7,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="938e37ed-b2ac-45b8-b8fc-2acfa37baa4f" name="Changes" comment="After Tues 9/17">
-      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/Debugger.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/Location.cs" afterDir="false" />
+    <list default="true" id="938e37ed-b2ac-45b8-b8fc-2acfa37baa4f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/CommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/Item.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/Map.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TEXTadventureGAME/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TEXTadventureGAME/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/Command.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/Command.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/CommandProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/CommandProcessor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/CommandValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/CommandValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/Location.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/Location.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/Vocabulary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/Vocabulary.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,19 +64,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Project.TEXTadventureGAME.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.TEXTadventureGAME.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="TEXTadventureGAME" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -107,7 +109,10 @@
       <workItem from="1725905276867" duration="2340000" />
       <workItem from="1726015414286" duration="4321000" />
       <workItem from="1726188107620" duration="649000" />
-      <workItem from="1726188887650" duration="14009000" />
+      <workItem from="1726188887650" duration="14752000" />
+      <workItem from="1727811396065" duration="2585000" />
+      <workItem from="1728001957275" duration="5804000" />
+      <workItem from="1728434038984" duration="4417000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -141,7 +146,23 @@
       <option name="project" value="LOCAL" />
       <updated>1726654344138</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed debugger to distinguish nouns that cant be without verbs">
+      <option name="closed" value="true" />
+      <created>1726796714861</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1726796714862</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fixed debugger to distinguish nouns that cant be without verbs&#10;stuff that we did in class 10/3">
+      <option name="closed" value="true" />
+      <created>1728068967933</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728068967933</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +177,8 @@
     <MESSAGE value="After 9/12 class" />
     <MESSAGE value="After Thurs 9/12" />
     <MESSAGE value="After Tues 9/17" />
-    <option name="LAST_COMMIT_MESSAGE" value="After Tues 9/17" />
+    <MESSAGE value="fixed debugger to distinguish nouns that cant be without verbs" />
+    <MESSAGE value="fixed debugger to distinguish nouns that cant be without verbs&#10;stuff that we did in class 10/3" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed debugger to distinguish nouns that cant be without verbs&#10;stuff that we did in class 10/3" />
   </component>
 </project>
