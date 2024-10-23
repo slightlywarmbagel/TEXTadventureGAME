@@ -2,13 +2,13 @@ namespace TEXTadventureGAME;
 
 public class Location
 {
-    public string Name;
+    public string Name { get; }
     
-    public string Description;
+    public string Description { get; }
 
-    public Dictionary<string, Location> Connections;
+    public Dictionary<string, Location> Connections { get; }
 
-    public List<Item> Items;
+    public List<Item> Items { get; }
     public Location(string name, string description)
     {
         Name = name;
@@ -42,7 +42,7 @@ public class Location
 
         foreach (Item item in Items)
         {
-            fullDescription = fullDescription + "\n" + item.GetLocationDescription();
+            fullDescription = fullDescription + "\n" + item.GetLocationDescription(); 
         }
         return fullDescription;
         

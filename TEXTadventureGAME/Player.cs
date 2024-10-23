@@ -45,7 +45,7 @@ public static class Player
 
             //add to our inventory
             Inventory.Add(item);
-            item.Pickup();
+            //item.Pickup();
             currentLocation.RemoveItem(item);
             IO.Write("You take the " + command.Noun + ".");
             
@@ -61,12 +61,12 @@ public static class Player
     public static void Drop(Command command)
     {
         //find item in inventory
-        Item? item = Inventory.FirstOrDefault(i => 
+        Item? item = Inventory.FirstOrDefault(i =>
             i.Name.ToLower() == command.Noun.ToLower());
         //the question mark tells C# that it's okay for the variable Item to store a null.  
         //variable name is i, can be anything though. 
-        
-        
+
+
         //if exists
         if (item != null)
         {
@@ -76,10 +76,22 @@ public static class Player
             //have to preface the quotation with the dollar sign. 
             //without the dollar sign, doesn't know that the {item.Name} isn't a string. It tells the system to pop out the curly bracket
         }
-            //remove from inventory list
-            //put item at location
-            //print out text that we dropped the item
-        //else
-            //print that you are dumb. 
+    }
+    
+    public static void ShowInventory()
+    { 
+        if (Inventory.Count == 0)
+        { 
+            IO.Write("Your pocket are empty.");
+        }
+        else
+        {
+            IO.Write("You are carrying:");
+            foreach (Item item in Inventory)
+            {
+                string article = SemanticTools.CreateArticle(item.Name);
+                IO.Write("  " + article + " " + item.Name);
+            }
+        }
     }
 }

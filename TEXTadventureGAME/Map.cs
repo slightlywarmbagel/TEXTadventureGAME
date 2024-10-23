@@ -42,8 +42,10 @@ public static class Map
         Item keyCard = new Item("Key Card: Lieutenant Husk", "It's your key card. It's made of a hard, unbendable plastic. It's worn around the edges.", "In your pocket, your keycard sticks out just slightly");
             //adjust the name
         Item beer = new Item("Beer", "Beer's beer.", "There is a beer just sitting on the ground...menacingly... temptingly...Your mouth waters.");
+        Item gator = new Item("Alligator", "Alligator's beer.", "There is a smiling alligator.");
+        crewQuarters.AddItem(gator);
         crewQuarters.AddItem(key);
         crewQuarters.AddItem(keyCard);
         crewQuarters.AddItem(beer);
-    }//im missing something... its not showing the location description. 
+    }//add in the final locations... adjust to make more beer. INFINITE BEER. office hours?  
 }

@@ -2,17 +2,26 @@ namespace TEXTadventureGAME;
 
 public class Item
 {
-    public string Name; 
-    //function
-    public string Description;
-    public string InitialLocationDescription;
-
-    public int UseCount;
-    //expiration
-    public bool IsTakeable;
-    public bool IsEdible;
-    public bool HasBeenPickedUp = false;
+    public string Name { get; set; }
+    // function
+    public string Description { get; }
+    public string InitialLocationDescription { get; }
     
+    public int UseCount;
+    // expiration
+    public bool IsTakeable { get; private set; }
+    public bool IsEdible { get; }
+    public bool HasBeenPickedUp { get; private set; } = false;
+    
+
+    public string LocationDescription
+    {
+        get
+        {
+            string article = SemanticTools.CreateArticle(Name);
+            return $"There is {article} {Name} here.";
+        }
+    }
 
 
     public Item(string name, string description, string initialLocationDescription, bool isTakeable = true)
@@ -21,6 +30,7 @@ public class Item
         Description = description;
         InitialLocationDescription = initialLocationDescription;
         IsTakeable = isTakeable;
+        
         //HasBeenPickedUp = false; same thing as above just different wording. redundant 
         Vocabulary.AddNoun(name);
     }
@@ -33,7 +43,7 @@ public class Item
     public string GetLocationDescription()
     {
         if (HasBeenPickedUp)
-            return Description;
+            return LocationDescription;
         else
         {
             return InitialLocationDescription;
