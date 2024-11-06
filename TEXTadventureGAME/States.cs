@@ -1,12 +1,6 @@
 namespace TEXTadventureGAME;
 
 
-public enum StateType
-{
-   Exploring,    // 0
-   Combat,       // 1
-   Conversation  // 2
-}
 
 
 public static class States
@@ -52,8 +46,7 @@ public static class States
         currentState.Deactivate();
         currentState = states[type];
         currentState.Activate();
-        //deactivate current state 
-        //set the new state as current 
-        //activate the new state
+        Debugger.Write("Entering state: " + currentState.Type);
+        
     }
 }

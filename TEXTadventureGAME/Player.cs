@@ -8,7 +8,7 @@ public static class Player
     public static void Initialize()
     {
         currentLocation = Map.StartLocation;
-        IO.Write(currentLocation.GetDescription());
+        IO.WriteLine(currentLocation.GetDescription());
         
     }
     
@@ -17,28 +17,28 @@ public static class Player
         if (currentLocation.CanMoveInDirection(command.Noun))
         {
             currentLocation = currentLocation.GetLocationInDirection(command.Noun);
-            IO.Write(currentLocation.GetDescription());
+            IO.WriteLine(currentLocation.GetDescription());
         }
         else
         {
-            IO.Write("Can't go that way.");
+            IO.WriteLine("Can't go that way.");
         }
     }
 
     public static void Take(Command command)
     {
-        IO.Write("taking " + command.Noun);
+        IO.WriteLine("taking " + command.Noun);
         
         Item item = currentLocation.FindItem(command.Noun);
         
         //make beer and infinite beers. can take beer anywhere
         if (item == null)
         {
-            IO.Write("There is no " + command.Noun + " here.");
+            IO.WriteLine("There is no " + command.Noun + " here.");
         }
         else if (!item.IsTakeable)
         {
-            IO.Write("The " + command.Noun + " cannot be taken.");
+            IO.WriteLine("The " + command.Noun + " cannot be taken.");
         }
         else
         {
@@ -47,7 +47,7 @@ public static class Player
             Inventory.Add(item);
             //item.Pickup();
             currentLocation.RemoveItem(item);
-            IO.Write("You take the " + command.Noun + ".");
+            IO.WriteLine("You take the " + command.Noun + ".");
             
         }
 
@@ -72,7 +72,7 @@ public static class Player
         {
             Inventory.Remove(item);
             currentLocation.DropItem(item);
-            IO.Write($"You drop the {item.Name}.");
+            IO.WriteLine($"You drop the {item.Name}.");
             //have to preface the quotation with the dollar sign. 
             //without the dollar sign, doesn't know that the {item.Name} isn't a string. It tells the system to pop out the curly bracket
         }
@@ -82,15 +82,15 @@ public static class Player
     { 
         if (Inventory.Count == 0)
         { 
-            IO.Write("Your pocket are empty.");
+            IO.WriteLine("Your pocket are empty.");
         }
         else
         {
-            IO.Write("You are carrying:");
+            IO.WriteLine("You are carrying:");
             foreach (Item item in Inventory)
             {
                 string article = SemanticTools.CreateArticle(item.Name);
-                IO.Write("  " + article + " " + item.Name);
+                IO.WriteLine("  " + article + " " + item.Name);
             }
         }
     }

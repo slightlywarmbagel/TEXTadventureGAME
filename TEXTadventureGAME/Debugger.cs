@@ -8,18 +8,20 @@ public static class Debugger
     {
         if (isActive)
         {
-            IO.Write(message);
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            IO.WriteLine(message);
+            Console.ResetColor();
         }
     }
 
     public static void Tron()
     {
         isActive = true;
-        IO.Write("Debugging enabled fuck-o");
+        IO.WriteLine("Debugging enabled fuck-o");
     }
     public static void Troff()
     {
         isActive = false;
-        IO.Write("Debugging disabled fuckface");
+        IO.WriteLine("Debugging disabled fuckface");
     }
 }

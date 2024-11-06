@@ -6,8 +6,9 @@ public static class Vocabulary
     {"eat", "go", "take", "drop"};
     
     public static List<string> standaloneVerbs = new List<string>()
-        {"look", "inventory", "exit", "tron", "troff"};
+        {"look", "inventory", "exit", "tron", "troff", "talk"};
     //add eat into this one and you just comically eat a chunk out of the world. it goes back to normal afterwards and says so in the description that says you ate the world. 
+    
     public static List<string> nouns = new List<string>()
         {"north", "south", "east", "west", "up", "down"};
 

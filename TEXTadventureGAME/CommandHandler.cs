@@ -2,65 +2,18 @@ namespace TEXTadventureGAME;
 
 public static class CommandHandler
 {
-    private static Dictionary<string, Action<Command>> commandMap =
-        new Dictionary<string, Action<Command>>()
-        {
-            {"go", Move},
-            {"take", Take},
-            {"tron", Tron},
-            {"troff", Troff},
-            {"look", Look},
-            {"drop", Drop},
-            {"inventory", Inventory},
-        };
-
-    private static void Inventory(Command command)
-    {
-        Player.ShowInventory(); //WHYYYYY
-    }
-    
-    
-    private static void Drop(Command command)
-    {
-        Player.Drop(command);
-    }
-
     public static void Handle(Command command)
     {
-        if (commandMap.ContainsKey(command.Verb))
+        switch (States.GetCurrentState())
         {
-            Action<Command> action = commandMap[command.Verb];
-            action.Invoke(command);
+            case StateType.Exploring:
+                // use the handler for when exploring
+                ExplorationCommandHandler.Handle(command);
+                break;
+            case StateType.Conversation:
+                //use the handler for when in conversation
+                ConversationCommandHandler.Handle(command);
+                break;
         }
-        else
-        {
-            IO.Write("I don't know how to do that.");
-        }
-    }
-
-    private static void Look(Command command)
-    {
-        IO.Write(Player.GetLocationDescription());
-    }
-
-    private static void Move(Command command)
-    {
-        Player.Move(command);
-    }
-
-    private static void Take(Command command)
-    {
-        Player.Take(command);
-        
-    }
-    
-    private static void Tron(Command command)
-    {
-        Debugger.Tron();
-    }
-    
-    private static void Troff(Command command)
-    {
-        Debugger.Troff();
     }
 }
