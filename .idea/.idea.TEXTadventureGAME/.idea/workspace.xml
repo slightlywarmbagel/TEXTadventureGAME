@@ -8,22 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="938e37ed-b2ac-45b8-b8fc-2acfa37baa4f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/ANOTE.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/ConversationCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/ConversationCommandValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/ExplorationCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/ExplorationCommandValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/Prompt.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/StateType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TEXTadventureGAME/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TEXTadventureGAME/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/CommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/CommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/CommandProcessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/CommandProcessor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/CommandValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/CommandValidator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/Debugger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/Debugger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/IO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/IO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/States.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/States.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/Vocabulary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/Vocabulary.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +108,7 @@
       <workItem from="1729036401374" duration="4589000" />
       <workItem from="1729643513422" duration="5677000" />
       <workItem from="1729816828214" duration="2982000" />
-      <workItem from="1730856389461" duration="4181000" />
+      <workItem from="1730856389461" duration="4967000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -189,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729706032298</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="11/5 class">
+      <option name="closed" value="true" />
+      <created>1730860979989</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730860979989</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +201,7 @@
     <MESSAGE value="fixed debugger to distinguish nouns that cant be without verbs" />
     <MESSAGE value="10/8&#10;&#10;added take and drop commands so that you can take and drop items&#10;added look command" />
     <MESSAGE value="10/22 &#10;- added StateType with exploring, conversation and combat&#10;- fixed the problems from earlier" />
-    <option name="LAST_COMMIT_MESSAGE" value="10/22 &#10;- added StateType with exploring, conversation and combat&#10;- fixed the problems from earlier" />
+    <MESSAGE value="11/5 class" />
+    <option name="LAST_COMMIT_MESSAGE" value="11/5 class" />
   </component>
 </project>
