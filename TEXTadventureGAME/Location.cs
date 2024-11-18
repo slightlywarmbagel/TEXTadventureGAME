@@ -65,9 +65,27 @@ public class Location
     {
         Items.Remove(item);
     }
+    
+    public void RemoveItem(ItemType itemType)
+    {
+        Item? item = FindItem(itemType.ToString());
+        if (item == null)
+            return;
+        Items.Remove(item);
+    }
 
     public void DropItem(Item item)
     {
         Items.Add(item);
     }
+    
+    public void RemoveConnection(string direction)
+    {
+        if (Connections.ContainsKey(direction))
+        {
+            Connections.Remove(direction);
+        }
+    }
+    
+    
 }

@@ -11,9 +11,20 @@ public static class ExplorationCommandHandler
             ,{"troff", Troff}
             ,{"look", Look}
             ,{"drop", Drop}
+            ,{"pull", Pull}
             ,{"inventory", Inventory}
             ,{"talk", EnterConversationState}
         };
+
+    private static void Pull(Command command)
+    {
+        if (command.Noun == "buttplug")
+        {
+            Items.CreateItem(ItemType.buttplug, "I am buttplug", "There is plug of butts");
+            Player.AddToInventory(ItemType.buttplug);
+            Conditions.ChangeCondition(ConditionType.MagicButtplug, true);
+        }
+    }
 
     private static void EnterConversationState(Command command)
     {

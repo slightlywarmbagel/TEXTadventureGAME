@@ -35,9 +35,11 @@ public static class Game
     private static void Initialize()
     {
         Map.Initialize();
+        Items.initialize();
         Player.Initialize();
         States.Initialize();
-        States.Initialize();
+        Conditions.Initialize();
+        
     }
 }
 

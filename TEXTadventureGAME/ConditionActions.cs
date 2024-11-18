@@ -1,24 +1,51 @@
 namespace TEXTadventureGAME;
 
-public class ConditionActions
+public static class ConditionActions
 {
     public static Action WriteOutput(string message)
     {
         return () => IO.WriteLine(message);
     }
+
+    public static Action AddMapConnection(string startLocationName,
+        string direction, string endLocationName)
+    {
+        return () => Map.AddConnection(startLocationName, direction, endLocationName);
+    }
+
+    public static Action RemoveMapConnection(string locationName, string direction)
+    {
+        return () => Map.RemoveConnection(locationName, direction);
+    }
+
+    public static Action MovePlayerToLocation(string locationName)
+    {
+        return () => Player.MoveToLocation(locationName);
+    }
     
-    //add map connection
-    //remove map connection
-    //if player dies
-    //item use
-    //differing conversations based on if you have talked to the person or not 
-    //add new item to inventory
-    //remove item from inventory
+    public static Action AddItemToInventory(ItemType itemType)
+    {
+        return () => Player.AddToInventory(itemType);
+    }
+
+    public static Action RemoveItemFromInventory(ItemType itemType)
+    {
+        return () => Player.RemoveFromInventory(itemType);
+    }
+
+    public static Action AddItemToLocation(ItemType itemType, string locationName)
+    {
+        return () => Map.AddItem(itemType, locationName);
+    }
+
+    public static Action RemoveItemFromLocation(ItemType itemType, string locationName)
+    {
+        return () => Map.RemoveItem(itemType, locationName);
+    }
+    
+    
+    //add item to room
     //remove item from room
-    
-    //spawn mob
-    //remove mob 
-    //change state
-    //relocate player hehe
+    //if player dies
     
 }

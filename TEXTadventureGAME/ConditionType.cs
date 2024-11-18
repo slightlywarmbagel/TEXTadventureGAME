@@ -6,6 +6,7 @@ public enum ConditionType
     IsInRoomWithChest,
     IsDrunk,
     IsInBedWithChest,
+    MagicButtplug
 }
 
 //add more in... 

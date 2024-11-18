@@ -10,11 +10,25 @@ public static class Conditions
         new Dictionary<ConditionType, Condition>();
 
 
-    public static void Initalize()
+    public static void Initialize()
     {
         Condition isDrunked = new Condition(ConditionType.IsDrunk);
         isDrunked.AddToActivateCallList(ConditionActions.WriteOutput("Hic!"));
+        isDrunked.AddToActivateCallList(
+            //FIX THE NAMES OF THESE LOCATIONS BECAUSE THEY ARE INCORRECT!!!
+            ConditionActions.AddMapConnection(
+                "Entrance Hall", "west", 
+                "Treasure Room"));
+        isDrunked.AddToActivateCallList(
+            ConditionActions.RemoveMapConnection(
+                "Entrance Hall", "north"));
+        isDrunked.AddToActivateCallList(ConditionActions.MovePlayerToLocation(
+            "Hole"));
         AddCondition(isDrunked);
+
+        Condition magicButtplug = new Condition(ConditionType.MagicButtplug);
+        magicButtplug.AddToActivateCallList(ConditionActions.WriteOutput("A buttplug appears out of thin air!"));
+        AddCondition(magicButtplug);
     }
     
     public static void AddCondition(Condition condition)
@@ -48,7 +62,7 @@ public static class Conditions
     {
         if (NotInDictionary(conditionType))
         {
-            IO.Error("Condition" + conditionType + "is not valid. Womp womp.");
+            IO.Error("Condition " + conditionType + " is not valid. Womp womp.");
             return;
         }
 
@@ -65,7 +79,7 @@ public static class Conditions
 
     private static bool NotInDictionary(ConditionType conditionType)
     {
-        return conditions.ContainsKey(conditionType);
+        return !conditions.ContainsKey(conditionType);
     }
     
     

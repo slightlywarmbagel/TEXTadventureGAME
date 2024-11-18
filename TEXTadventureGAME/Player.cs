@@ -1,3 +1,5 @@
+using System.Data;
+
 namespace TEXTadventureGAME;
 
 public static class Player
@@ -23,6 +25,22 @@ public static class Player
         {
             IO.WriteLine("Can't go that way.");
         }
+    }
+    
+    public static void AddToInventory(ItemType itemType)
+    {
+        Item? item = Items.FindItem(itemType);
+        if (item == null)
+            return;
+        Inventory.Add(item);
+    }
+
+    public static void RemoveFromInventory(ItemType itemType)
+    {
+        Item? item = Items.FindItem(itemType);
+        if (item == null)
+            return;
+        Inventory.Remove(item);
     }
 
     public static void Take(Command command)
@@ -93,5 +111,24 @@ public static class Player
                 IO.WriteLine("  " + article + " " + item.Name);
             }
         }
+    }
+    public static void Use(Command command)
+    {
+        if (command.Noun == "beer")
+        {
+            Conditions.ChangeCondition(ConditionType.IsDrunk, true);
+        }
+    }
+    public static void MoveToLocation(string locationName)
+    {
+        Location? newLocation = Map.GetLocationByName(locationName);
+        
+        if (newLocation == null)
+        {
+            IO.WriteLine("There is no location named " + locationName + ".");
+            return;
+        }
+        currentLocation = newLocation;
+        IO.WriteLine(currentLocation.GetDescription());
     }
 }

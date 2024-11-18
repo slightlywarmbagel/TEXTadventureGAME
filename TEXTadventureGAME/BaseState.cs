@@ -12,10 +12,6 @@ public class BaseState
     {
         
         IsActive = false;
-        
-        {
-            
-        }
     }
 
     public void Activate()

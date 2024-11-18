@@ -8,7 +8,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="938e37ed-b2ac-45b8-b8fc-2acfa37baa4f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/ItemType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TEXTadventureGAME/Items.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TEXTadventureGAME/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TEXTadventureGAME/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/ANOTE.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/ANOTE.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/BaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/BaseState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/ConditionActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/ConditionActions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/ConditionType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/ConditionType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/Conditions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/Conditions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/ExplorationCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/ExplorationCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/Location.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/Location.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/Map.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/Map.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEXTadventureGAME/Vocabulary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TEXTadventureGAME/Vocabulary.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,19 +70,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Project.TEXTadventureGAME.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.TEXTadventureGAME.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="TEXTadventureGAME" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -109,6 +123,8 @@
       <workItem from="1729643513422" duration="5677000" />
       <workItem from="1729816828214" duration="2982000" />
       <workItem from="1730856389461" duration="4967000" />
+      <workItem from="1731029373002" duration="5468000" />
+      <workItem from="1731442827329" duration="12123000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -182,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730860979989</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="11/7 class">
+      <option name="closed" value="true" />
+      <created>1731033931259</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1731033931260</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +226,26 @@
     <MESSAGE value="10/8&#10;&#10;added take and drop commands so that you can take and drop items&#10;added look command" />
     <MESSAGE value="10/22 &#10;- added StateType with exploring, conversation and combat&#10;- fixed the problems from earlier" />
     <MESSAGE value="11/5 class" />
-    <option name="LAST_COMMIT_MESSAGE" value="11/5 class" />
+    <MESSAGE value="11/7 class" />
+    <option name="LAST_COMMIT_MESSAGE" value="11/7 class" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/TEXTadventureGAME/Player.cs</url>
+          <line>81</line>
+          <properties documentPath="$PROJECT_DIR$/TEXTadventureGAME/Player.cs" containingFunctionPresentation="Method 'Drop'">
+            <startOffsets>
+              <option value="2054" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2153" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
