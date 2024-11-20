@@ -14,7 +14,6 @@ add in combat state, method and class
 
 
 things
-    - understanding conditions, basically what was covered in 11/12's class
     - adding in a randomly moving monster -- MOB
-    - randomly put in text
+    - randomly put in text? (note 11/19 what?. what does even mean? 
 */

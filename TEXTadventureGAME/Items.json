@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "itemType": "lantern",
+      "description": "An old Lantern",
+      "initialLocationText": "A lantern sits on the ground.",
+      "isTakeable": true,
+      "location": "Library"
+    },
+    {
+      "itemType": "beer",
+      "description": "Beer is thine beer",
+      "initialLocationText": "There is a beer just sitting on the ground...menacingly... temptingly...Your mouth waters.",
+      "isTakeable": true,
+      "location": "Crew Quarters"
+    }
+  ]
+}

@@ -1,18 +1,32 @@
 using System.Net.Sockets;
 using System.Runtime.CompilerServices;
+using System.Text.Json;
 
 namespace TEXTadventureGAME;
 
 public static class Items
 {
-    private static float Speed;
+   
     
     private static Dictionary<ItemType, Item> nameToItem = new Dictionary<ItemType, Item>();
     
     //this finds the items and puts them into inventory, its like a big table 
 
-    public static void initialize()
+    public static void Initialize()
     {
+        //read the json file text
+        string path  = Path.Combine(Environment.CurrentDirectory, "Items.json");
+        string rawText = File.ReadAllText(path);
+        
+        //convert the text to ItemsJsonData
+        ItemsJsonData data = JsonSerializer.Deserialize<ItemsJsonData>(rawText);
+        
+        
+        //create all the items 
+        
+        
+        
+        
         Item? key = new Item(ItemType.key, 
             "It's a... a key? Sike! It's cake that looks eerily like a key. It's probably good at opening doors...",
             "There's a suspicious looking 1800's key lying on the table against the wall.");

@@ -42,4 +42,4 @@ public static class Parser
     }
 }
 
-/*make sure to read through the code and actually test it. dont just be an asshole and do everything at once*/
+/*make sure to read through the code and actually test it. dont just be a buttfucker and try do everything at once*/
