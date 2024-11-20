@@ -1,3 +1,5 @@
+using System.Text.Json;
+
 namespace TEXTadventureGAME;
 
 public static class Map
@@ -10,7 +12,57 @@ public static class Map
     
     public static void Initialize()
     {
-        Location crewQuarters = AddLocation("A1 'Crew Quarters'", 
+        //read the json file text
+        string path  = Path.Combine(Environment.CurrentDirectory, "Locations.json");
+        string rawText = File.ReadAllText(path);
+        
+        //convert 
+        
+        MapJsonData? data = JsonSerializer.Deserialize<MapJsonData>(rawText);
+
+        Dictionary<string, Location> locations = new Dictionary<string, Location>();
+        
+        //add all locations
+        foreach (LocationJsonData location in data.locations)
+        {
+            Location newLocation = AddLocation(location.Name, location.Description);
+            locations.Add(newLocation.Name, newLocation);
+        }
+
+        //create all locations 
+        foreach (LocationJsonData location in data.locations)
+        {
+            Location currentLocation = locations[location.Name];
+
+            foreach (KeyValuePair<string, string> connection in location.Connections)
+            {
+                string direction = connection.Key;
+                string destination = connection.Value;
+
+                if (locations.ContainsKey(destination))
+                {
+                    Location connectedLocation = locations[destination];
+                    currentLocation.AddConnection(direction, connectedLocation);
+                }
+                else
+                {
+                    IO.Error($"Location {location.Name} does not exist. Suck it, dream boy.");
+                }
+            }
+        }
+        
+        //set starting location
+        if (locations.TryGetValue(data.StartLocation, out Location startLocation))
+        {
+            StartLocation = startLocation;
+        }
+        else
+        {
+            IO.Error($"Fuck you. This {data.StartLocation} does not exist.");
+        }
+        
+        /*
+        Location crewQuarters = AddLocation("A1 'Crew Quarters'",
             "A large circular room. Theres a glass pillar in the middle of the geometric room that shows outerspace. A hallway leads North and three doors sit East, South, and West.");
         Location mainHall = AddLocation("Main Hall",
             "Through the hallway you enter into the storage room and main hall of the ship. The walls are padded and hundreds of equipped storage bins line the walls. It's a bit of a mess. A door sits North.");
@@ -29,19 +81,19 @@ public static class Map
         crewQuarters.AddConnection("east", crewRoomA);
         crewQuarters.AddConnection("south", crewRoomYou);
         crewQuarters.AddConnection("west", crewRoomB);
-        
+
         mainHall.AddConnection("south", crewQuarters);
         mainHall.AddConnection("north", pilotHub);
-        
+
         pilotHub.AddConnection("south", mainHall);
-        
+
         crewRoomA.AddConnection("west", crewQuarters);
         crewRoomB.AddConnection("east", crewQuarters);
         crewRoomYou.AddConnection("north", crewQuarters);
-        
-        
-        StartLocation = crewQuarters;
-    }//add in the final locations... 
+
+
+        StartLocation = crewQuarters; */
+    }
     
     private static Location AddLocation(string name, string description)
     {

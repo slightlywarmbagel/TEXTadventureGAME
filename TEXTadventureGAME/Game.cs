@@ -18,6 +18,7 @@ public static class Game
 
     public static void Play()
     {
+        ShowIntroText();
         Initialize();
         
         while (isPlaying)
@@ -40,6 +41,12 @@ public static class Game
         States.Initialize();
         Conditions.Initialize();
         
+    }
+
+    private static void ShowIntroText()
+    {
+        IO.WriteLine("This is some intro text.");
+        IO.WriteLine("Here is another line that has a lot of text and is really reallyre allrndfjndsfkndskfs long.");
     }
 }
 

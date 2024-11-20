@@ -1,0 +1,226 @@
+{
+  "locations": 
+          [
+            {
+              "Name": "Cryo Lab",
+              "Description": "Hello this is a test \n howd howdy",
+              "Connections":
+              {
+                "north":"Lounge"
+              }
+            },
+            {
+              "Name": "Lounge",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections":
+              {
+                "north": "Central Atrium",
+                "east": "MedBay",
+                "south": "Cryo Lab",
+                "west": "Kitchen"
+              }
+            },
+            {
+              "Name": "MedBay",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections": 
+              {
+                "west": "Lounge"
+              }
+            },
+            {
+              "Name": "Kitchen",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections":
+              {
+                "east": "Lounge"
+              }
+            },
+            {
+              "Name": "Central Atrium",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections":
+              {
+                "north": "Crew Room: Husk",
+                "north east": "Cake Closet",
+                "east": "Crew Room: Rowdy",
+                "south": "Lounge",
+                "west": "Crew Room: Pierce and Ryder",
+                "up": "Upper Atrium",
+                "down": "Lower Atrium"
+              }
+            },
+            {
+              "Name": "Crew Room: Husk",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections":
+              {
+                "south": "Central Atrium"
+              }
+            },
+            {
+              "Name": "Crew Room: Rowdy",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections":
+              {
+                "west": "Central Atrium"
+              }
+            },
+            {
+              "Name": "Crew Room: Pierce and Ryder",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections":
+              {
+                "east": "Central Atrium"
+              }
+            },
+            {
+              "Name": "Cake Closet",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections":
+              {
+                "south east": "Central Atrium"
+              }
+            },
+            
+            {
+              "Name": "Lower Atrium",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections": 
+              {
+                "north": "Cargo Hold",
+                "east": "Engine Room Beta",
+                "south": "View Port",
+                "west": "Engine Room Alpha",
+                "up": "Central Atrium"
+              }
+            },
+            {
+              "Name": "Engine Room Beta",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections":
+              {
+                "west": "Lower Atrium"
+              }
+            },
+            {
+              "Name": "Engine Room Alpha",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections":
+              {
+                "east": "Lower Atrium"
+              }
+            },
+            {
+              "Name": "View Port",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections":
+              {
+                "north": "Lower Atrium"
+              }
+            },
+            {
+              "Name": "Cargo Hold",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections":
+              {
+                "north": "Base Hallway",
+                "east": "Tech Bay",
+                "south": "Lower Atrium",
+                "west": "Gear Hold"
+              }
+            },
+            {
+              "Name": "Tech Bay",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections":
+              {
+                "west": "Cargo Hold"
+              }
+            },
+            {
+              "Name": "Gear Hold",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections":
+              {
+                "east": "Cargo Hold"
+                
+              }
+            },
+            {
+              "Name": "Base Hallway",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections":
+              {
+                "north": "Escape Pod",
+                "south": "Cargo Hold"
+              }
+            },
+            {
+              "Name": "Escape Pod",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections":
+              {
+                "south": "Base Hallway"
+              }
+            },
+            {
+              "Name": "Upper Atrium",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections":
+              {
+                "north": "Upper Hallway",
+                "east": "Storage Closet east",
+                "south": "Captains Quarters: Smith",
+                "west": "Storage Closet west",
+                "down": "Central Atrium"
+              }
+            },
+            {
+              "Name": "Upper Hallway",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections":
+              {
+                "north": "Pilots Hub",
+                "east": "Undertale Closet",
+                "south": "Upper Atrium"
+              }
+            },
+            {
+              "Name": "Pilots Hub",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections":
+              {
+                "south": "Upper Hallway"
+              }
+            },
+            {
+              "Name": "Storage Closet",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections":
+              {
+                "west": "Upper Atrium"
+              }
+            },
+            {
+              "Name": "Beer Closet",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections":
+              {
+                "east": "Upper Atrium"
+              }
+            },
+            {
+              "Name": "Captains Quarters",
+              "Description": "ADD IN DESCRIPTION",
+              "Connections":
+              {
+                "north": "Upper Atrium"
+              }
+            }
+          ],
+"StartLocation": "Cryo Lab"
+}
+
+
+

@@ -2,5 +2,5 @@ namespace TEXTadventureGAME;
 
 public class ItemsJsonData
 {
-    public List<ItemsJsonData> Items;
+    public List<ItemJsonData> Items { get; set; }
 }

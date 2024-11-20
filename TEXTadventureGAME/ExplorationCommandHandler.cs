@@ -20,11 +20,18 @@ public static class ExplorationCommandHandler
     {
         if (command.Noun == "buttplug")
         {
-            Items.CreateItem(ItemType.buttplug, "I am buttplug", "There is plug of butts");
+            Items.CreateItem(ItemType.buttplug, "I am buttplug", "It's plug of butts");
             Player.AddToInventory(ItemType.buttplug);
             Conditions.ChangeCondition(ConditionType.MagicButtplug, true);
         }
+        if (command.Noun == "beer")
+        {
+            Items.CreateItem(ItemType.beer, "Beer's beer", "It's rancid, but you could convince yourself to drink it... \n Should you, though? ");
+            Player.AddToInventory(ItemType.beer);
+            Conditions.ChangeCondition(ConditionType.MysticalBeer, true);
+        }
     }
+
 
     private static void EnterConversationState(Command command)
     {

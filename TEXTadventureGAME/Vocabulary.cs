@@ -3,7 +3,7 @@ namespace TEXTadventureGAME;
 public static class Vocabulary
 {
     public static List<string> notStandaloneVerbs = new List<string>()
-    {"eat", "go", "take", "drop", "pull", "use"};
+    {"eat", "go", "take", "drop", "pull", "use", "inspect"};
     
     public static List<string> standaloneVerbs = new List<string>()
         {"look", "inventory", "exit", "tron", "troff", "talk"};

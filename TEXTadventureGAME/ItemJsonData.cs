@@ -2,9 +2,9 @@ namespace TEXTadventureGAME;
 
 public class ItemJsonData
 {
-    public string ItemType;
-    public string Description;
-    public string InitialLocationText;
-    public bool IsTakeable;
-    public string Location;
+    public string ItemType { get; set; }
+    public string Description { get; set; }
+    public string InitialLocationText { get; set; }
+    public bool IsTakeable { get; set; }
+    public string Location { get; set; }
 }

@@ -18,6 +18,14 @@ public static class Player
     {
         if (currentLocation.CanMoveInDirection(command.Noun))
         {
+            
+            // how to make it so you can't go somewhere unless a condition is true
+            if (currentLocation.Name == "Bedroom" && command.Noun == "east" && Conditions.IsFalse(ConditionType.HasKey))
+            {
+                IO.WriteLine("You need the key to move the bedroom.");
+                return;
+            }
+            //manually code both times. you cannot drop it. 
             currentLocation = currentLocation.GetLocationInDirection(command.Noun);
             IO.WriteLine(currentLocation.GetDescription());
         }
@@ -45,8 +53,6 @@ public static class Player
 
     public static void Take(Command command)
     {
-        IO.WriteLine("taking " + command.Noun);
-        
         Item item = currentLocation.FindItem(command.Noun);
         
         //make beer and infinite beers. can take beer anywhere
@@ -71,6 +77,16 @@ public static class Player
 
     }
 
+   /* if (item != null)
+    {
+        inventory 
+    }
+    if (Item.Name == "key")
+    {
+         Conditions.IsFalse(ConditionType.HasKey);
+    }
+    */
+    
     public static string GetLocationDescription()
     {
         return currentLocation.GetDescription();
@@ -119,6 +135,55 @@ public static class Player
             Conditions.ChangeCondition(ConditionType.IsDrunk, true);
         }
     }
+    
+    
+    
+    
+// Player enters room and program tells player what's in the room ie; item's initial description
+// player takes item and item is now in inventory
+// player types "inspect {item/noun}"
+// gives back inspected description of item
+// why? player shouldn't know that the book on the shelf is a shakespeare story just by a first glance. 
+//      i want the player to be able to pick up the keycard and then inspect it to find out that it's the card to the kitchen etc
+
+    public static void Inspect(string itemType)
+    {
+        if (Command.Noun == Item)
+        {
+            IO.WriteLine();
+        }
+    }
+     
+    
+    
+    public static void Inspect(Command command)
+    
+    {
+    if (Command.Noun("Inspect", StringComparison.OrdinalIgnoreCase))
+    {
+        if (Item(Input, out string description))
+        {
+            Console.WriteLine($"Description of {userInput}: {description}");
+        }
+        else
+        {
+            Console.WriteLine("Item not found. Please try again.");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Invalid command. Please use 'Inspect'.");
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     public static void MoveToLocation(string locationName)
     {
         Location? newLocation = Map.GetLocationByName(locationName);

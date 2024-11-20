@@ -18,36 +18,39 @@ public static class Items
         string path  = Path.Combine(Environment.CurrentDirectory, "Items.json");
         string rawText = File.ReadAllText(path);
         
-        //convert the text to ItemsJsonData
-        ItemsJsonData data = JsonSerializer.Deserialize<ItemsJsonData>(rawText);
         
+        //convert the text to ItemsJsonData
+        ItemsJsonData? data = JsonSerializer.Deserialize<ItemsJsonData>(rawText);
+        //deserialize means that it reads that text (from the file) and makes it into class. raw text. bam. 
         
         //create all the items 
-        
-        
-        
-        
-        Item? key = new Item(ItemType.key, 
-            "It's a... a key? Sike! It's cake that looks eerily like a key. It's probably good at opening doors...",
-            "There's a suspicious looking 1800's key lying on the table against the wall.");
-        
-        Map.AddItem(key, "Storage Room");
+        foreach (ItemJsonData itemData in data.Items)
+            //red error in this text, was originally data. Items plural?,
+        // tried to fix the other plurals but it just made things worse... sigh. 
+        {
+            if (!Enum.TryParse(itemData.ItemType,
+                    true, out ItemType itemType))
+            {
+                IO.Error("Invalid item type " + itemData.ItemType +
+                         "in Items.json");
+                continue;
+            }
 
-        Item? beer = CreateItem(ItemType.beer, "Beer's beer",
-            "There is a beer just sitting on the ground...menacingly... temptingly...Your mouth waters.");
-        Map.AddItem(beer, "Crew Quarters");
-        
-        
-        Item keyCard = new Item(ItemType.keycard, "It's your key card. It's made of a hard, unbendable plastic. It's worn around the edges.", "In your pocket, your keycard sticks out just slightly");
-        //adjust the name
-        Item gator = new Item(ItemType.alligator, "Alligator's beer.", "There is a smiling alligator."); 
-        
-        Map.AddItem(keyCard, "Crew Quarters");
-        Map.AddItem(key, "Crew Quarters");
-        Map.AddItem(gator, "Crew Quarters");
-        Map.AddItem(beer, "Crew Quarters");
-        
+            Item? item = CreateItem(itemType, itemData.Description, 
+                itemData.InitialLocationText, itemData.IsTakeable);
+            
+            if (item != null)
+            {
+                Map.AddItem(itemType, itemData.Location);
+            }
+        }
     }
+    
+    
+    
+    
+    
+    
     
     public static Item? CreateItem(ItemType itemType, string description, string initialLocationDescription, bool isTakeable = true)
     {

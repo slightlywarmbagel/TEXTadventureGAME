@@ -15,5 +15,11 @@ add in combat state, method and class
 
 things
     - adding in a randomly moving monster -- MOB
-    - randomly put in text? (note 11/19 what?. what does even mean? 
+    - randomly put in text? (note 11/19 what?. what does even mean?
+    
+things 11/21
+    - make an intro
+    - how to start game? 
+    
+    
 */

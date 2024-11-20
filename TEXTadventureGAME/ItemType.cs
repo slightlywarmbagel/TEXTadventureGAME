@@ -8,7 +8,8 @@ public enum ItemType
     gun,   // 4
     ammo,  // 5
     egg,   // 6
-    buttplug,
+    buttplug, // the best one here. 
     keycard,
     alligator,
+    lantern,
 }
