@@ -46,7 +46,7 @@ public static class Map
                 }
                 else
                 {
-                    IO.Error($"Location {location.Name} does not exist. Suck it, dream boy.");
+                    IO.Error($"Location {destination} does not exist. Suck it, dream boy.");
                 }
             }
         }

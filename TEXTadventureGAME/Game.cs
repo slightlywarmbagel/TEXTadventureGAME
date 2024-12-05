@@ -46,7 +46,13 @@ public static class Game
     private static void ShowIntroText()
     {
         IO.WriteLine("This is some intro text.");
+        Pause(3);
         IO.WriteLine("Here is another line that has a lot of text and is really reallyre allrndfjndsfkndskfs long.");
+    }
+
+    public static void Pause(int seconds)
+    {
+        Thread.Sleep(seconds * 1000);
     }
 }
 

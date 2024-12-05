@@ -146,6 +146,7 @@ public static class Player
 // why? player shouldn't know that the book on the shelf is a shakespeare story just by a first glance. 
 //      i want the player to be able to pick up the keycard and then inspect it to find out that it's the card to the kitchen etc
 
+/*
     public static void Inspect(string itemType)
     {
         if (Command.Noun == Item)
@@ -153,37 +154,33 @@ public static class Player
             IO.WriteLine();
         }
     }
-     
-    
-    
+*/
+
+/*
     public static void Inspect(Command command)
-    
+
     {
-    if (Command.Noun("Inspect", StringComparison.OrdinalIgnoreCase))
-    {
-        if (Item(Input, out string description))
+        if (Command.Noun("Inspect", StringComparison.OrdinalIgnoreCase))
         {
-            Console.WriteLine($"Description of {userInput}: {description}");
+            if (Item(Input, out string description))
+            {
+                Console.WriteLine($"Description of {userInput}: {description}");
+            }
+            else
+            {
+                Console.WriteLine("Item not found. Please try again.");
+            }
         }
         else
         {
-            Console.WriteLine("Item not found. Please try again.");
+            Console.WriteLine("Invalid command. Please use 'Inspect'.");
         }
+
     }
-    else
-    {
-        Console.WriteLine("Invalid command. Please use 'Inspect'.");
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+*/
+
     public static void MoveToLocation(string locationName)
     {
         Location? newLocation = Map.GetLocationByName(locationName);
@@ -195,5 +192,26 @@ public static class Player
         }
         currentLocation = newLocation;
         IO.WriteLine(currentLocation.GetDescription());
+    }
+
+    public static void Inspect(Command command)
+    {
+        Item item = GetItem(command.Noun);
+        if (item == null)
+        {
+            IO.WriteLine("You're not carrying the " + command.Noun + ", dumb ass.");
+            return;
+        }
+
+        string detailedDescription = item.DetailedDescription;
+        IO.WriteLine(detailedDescription);
+    }
+
+    private static Item GetItem(string itemName)
+    {
+        Item? item = Inventory.FirstOrDefault(i =>
+            i.Name.ToLower() == itemName.ToLower());
+
+        return item;
     }
 }

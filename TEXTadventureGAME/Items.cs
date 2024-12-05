@@ -37,7 +37,7 @@ public static class Items
             }
 
             Item? item = CreateItem(itemType, itemData.Description, 
-                itemData.InitialLocationText, itemData.IsTakeable);
+                itemData.InitialLocationText, itemData.DetailedDescription, itemData.IsTakeable);
             
             if (item != null)
             {
@@ -48,23 +48,18 @@ public static class Items
     
     
     
-    
-    
-    
-    
-    public static Item? CreateItem(ItemType itemType, string description, string initialLocationDescription, bool isTakeable = true)
+    public static Item? CreateItem(ItemType itemType, string description, string initialLocationDescription, 
+        string detailedDescription = "",  bool isTakeable = true)
     {
         if (nameToItem.ContainsKey(itemType))
         {
             IO.Error($"Item {itemType.ToString()} already exists");
             return null;
         }
-
-       // if (nameToItem.ContainsKey("beer"))
-        {
-            //add beer to inventory
-        }
-        Item item = new Item(itemType, description, initialLocationDescription, isTakeable);
+        
+        if (detailedDescription == string.Empty)
+            detailedDescription = description;
+        Item item = new Item(itemType, description, initialLocationDescription, detailedDescription, isTakeable);
         nameToItem.Add(itemType, item);
         Vocabulary.AddNoun(itemType.ToString());
         return item;

@@ -14,7 +14,13 @@ public static class ExplorationCommandHandler
             ,{"pull", Pull}
             ,{"inventory", Inventory}
             ,{"talk", EnterConversationState}
+            ,{"inspect", Inspect}
         };
+
+    private static void Inspect(Command command)
+    {
+        Player.Inspect(command);
+    }
 
     private static void Pull(Command command)
     {

@@ -4,6 +4,7 @@
       "ItemType": "lantern",
       "Description": "An old Lantern",
       "InitialLocationText": "A lantern sits on the ground.",
+      "DetailedDescription": "It's detailed!",
       "IsTakeable": true,
       "Location": "Crew Quarters"
     },
@@ -11,6 +12,7 @@
       "ItemType": "beer",
       "Description": "Beer is thine beer",
       "InitialLocationText": "There is a beer just sitting on the ground...menacingly... temptingly...Your mouth waters.",
+      "DetailedDescription": "It's detailed!",
       "IsTakeable": true,
       "Location": "Crew Quarters"
     },
@@ -18,6 +20,7 @@
       "ItemType": "alligator",
       "Description": "Alligator's beer.",
       "InitialLocationText": "There is a smiling alligator.",
+      "DetailedDescription": "It's detailed!",
       "IsTakeable": true,
       "Location": "Crew Quarters"
     },
@@ -25,6 +28,7 @@
       "ItemType": "keycard",
       "Description": "It's your key card. It's made of a hard, unbendable plastic. It's worn around the edges.",
       "InitialLocationText": "In your pocket, your keycard sticks out just slightly",
+      "DetailedDescription": "It's detailed!",
       "IsTakeable": true,
       "Location": "Crew Quarters"
     }
